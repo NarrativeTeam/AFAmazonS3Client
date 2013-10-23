@@ -152,6 +152,11 @@ NSString * AFBase64EncodedStringFromData(NSData *data) {
     return self;
 }
 
+- (void)setAccessKeyID:(NSString *)accessKey secret:(NSString *)secret {
+    _accessKey = accessKey;
+    _secret = secret;
+}
+
 - (NSURL *)baseURL {
     if (!_s3_baseURL) {
         return [NSURL URLWithString:AFAmazonS3BaseURLStringWithBucketInRegion(self.bucket, self.region)];

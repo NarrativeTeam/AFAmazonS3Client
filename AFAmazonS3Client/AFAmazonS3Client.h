@@ -61,6 +61,14 @@
                    secret:(NSString *)secret;
 
 /**
+ Setting the credentials.
+ 
+ @param accessKey The AWS access key.
+ @param secret The AWS secret.
+ */
+- (void)setAccessKeyID:(NSString *)accessKey secret:(NSString *)secret;
+
+/**
  Returns the AWS authorization HTTP header fields for the specified request.
 
  @param request The request.
